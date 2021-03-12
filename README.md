@@ -1,3 +1,48 @@
+# openssl.vim 
+
+#### Installation: 
+Check that you have vim plugin folder in your home directory: 
+```
+ls ~/.vim/plugin
+```
+
+If it does not exist, create one: 
+```
+mkdir -p ~/.vim/plugin
+```
+
+Download the openssl.vim to the plugin folder:
+```
+wget https://raw.githubusercontent.com/pranabdas/openssl.vim/master/plugin/openssl.vim \
+-O ~/.vim/plugin/openssl.vim
+```
+
+#### Quick start 
+Create new or open existing AES encrypted file: 
+```
+vi my_secret_file.aes
+```
+
+#### Things to keep in mind: 
+
+- First save the file without writing any content. The swap file is disabled for
+`.aes` filetype, but if the file is not yet saved to the disc and only in the 
+buffer, it will still create swap files and save the un-encrypted content to the 
+disc. 
+
+- You need to provide the encryption password every time you save the file. Be
+careful to use same (intended) password. The program does not check whether 
+a new password is used (that is not the same as the one previously used). 
+Content cannot be recovered if you do not remember the password you used last 
+time to save the file. 
+
+- You may see some characters (for me first two characters of second line) are 
+missing when opening a file. Please reload by pressing `Ctrl + L`. 
+
+***
+
+#### Original README
+
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=2012
 
 == Edit OpenSSL encrypted files and turn Vim into a Password Safe! ==
