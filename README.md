@@ -39,6 +39,13 @@ time to save the file.
 - You may see some characters (for me first two characters of second line) are 
 missing when opening a file. Please reload by pressing `Ctrl + L`. 
 
+- MacOS (tested on Big Sur) ships with LibreSSL. This plugin is not working with
+LibreSSL. Solution: install OpenSSL via brew `brew install openssl` and add 
+following to your `.zshrc`:
+```
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+```
+
 ***
 
 #### Original README
